@@ -1,0 +1,22 @@
+OPRACOWANIE - METODA OSCYLOSKOPOWA
+==============================================================================
+
+Założenia:
+  oscyloskop: Rigol DS1000E;  CH1 = U_we (generator),  CH2 = U_wy (na R = 1 kΩ)
+  czułość CH1 i CH2: 500 mV/div;  podstawa czasu: 200 µs/div;  próbkowanie co 1 µs
+  dokładność U: ±(3% * |U| + 0,1 div + 1 mV);  u = dokładność / sqrt(3)
+  I_D = U_wy / R,  U_D = U_we - U_wy
+  u(I_D) = u(U_wy) / R,  u(U_D) = sqrt(u(U_we)^2 + u(U_wy)^2)
+  U_wy - zanotowane U_min i U_max (CH2);  U_we - minimum i maksimum CH1 z pliku .wfm
+
+PODSUMOWANIE
+------------------------------------------------------------------------------
+dioda                   kierunek             U_we [V]       U_wy [V]        I_D [mA]        U_D [V]
+Dioda 1 (prostownicza)  przewodzenie      1.20 ± 0.05    0.68 ± 0.04     0.68 ± 0.04    0.52 ± 0.06
+                        zaporowy         -1.30 ± 0.05   -0.02 ± 0.03    -0.02 ± 0.03   -1.28 ± 0.06
+Dioda 2 (Zenera)        przewodzenie      1.22 ± 0.05    0.54 ± 0.04     0.54 ± 0.04    0.68 ± 0.06
+                        zaporowy         -1.30 ± 0.05   -0.12 ± 0.03    -0.12 ± 0.03   -1.18 ± 0.06
+Dioda 3 (Zenera)        przewodzenie      1.22 ± 0.05    0.54 ± 0.04     0.54 ± 0.04    0.68 ± 0.06
+                        zaporowy         -1.30 ± 0.05   -0.02 ± 0.03    -0.02 ± 0.03   -1.28 ± 0.06
+Dioda 4 (Zenera)        przewodzenie      1.22 ± 0.05    0.54 ± 0.04     0.54 ± 0.04    0.68 ± 0.06
+                        zaporowy         -1.30 ± 0.05   -0.02 ± 0.03    -0.02 ± 0.03   -1.28 ± 0.06
